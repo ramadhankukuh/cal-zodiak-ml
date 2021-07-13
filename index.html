@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+					<h2>KALKULATOR
+                    
+<div class="slidecontainer">
+                                   	<p>&nbsp;</p>
+                         <span><font color='black'>Star Point: </font></span> <span id="f" style="font-weight:bold;color:blue"></span><br/>
+ 						 <input type="range" min="0" max="99" value="50" name="sld6" class="slider" id="myRange" onchange="show_value2(this.value)">
+ 						 <font color='black'>Maksimal Butuh: </font><span id="slider_value2" style="color:blue;font-weight:bold;"></span>
+
+                         <img style="margin-right: 3px !important;" height="18px" src="https://zeeshopgaming.com/img/diamond.svg"/><br>    
+
+ 						
+ 						 
+<script>
+function show_value2(x)
+{
+
+ if(x<90){
+ yz = Math.ceil((2000-x*20)*95/100); }
+
+  if(x>89){
+ yz = Math.ceil((2000-x*20)); }
+
+ document.getElementById("slider_value2").innerHTML=yz;
+ 
+}
+</script>
+
+
+ 
+<script>
+var slideCol = document.getElementById("myRange");
+var y = document.getElementById("f");
+y.innerHTML = slideCol.value;
+
+slideCol.oninput = function() {
+    y.innerHTML = this.value;
+}
+ 
+</script>
+ 
+ 
+</div>
+<br/>
